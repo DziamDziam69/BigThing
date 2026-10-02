@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TextBlock Margin="0,0,36,0"> DIH DIH DIH</TextBlock>
     </Grid>
 </Window>
