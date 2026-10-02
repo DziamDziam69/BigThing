@@ -7,6 +7,30 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock Margin="0,0,36,0"> DIH DIH DIH</TextBlock>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="673*"/>
+            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Border Background="hotpink" Grid.ColumnSpan="3"/>
+        <Border Background="pink" Margin="37,98,36,20" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBlock  FontWeight="bold" FontSize="25" RenderTransformOrigin="0.495,0.499" Margin="210,60,102,318" Grid.Column="1"><Run Text="Bibliotek Gier"/></TextBlock>
+        <TextBlock FontSize="20" FontWeight="bold" TextAlignment="Center" Margin="110,135,332,243" Grid.Column="1" Text="Nazwa Gry"></TextBlock>
+        <TextBox x:Name="NazwaGry" Text="Wpisz Nazwę Gry" RenderTransformOrigin="0.74,0.491" Margin="288,135,143,243" Grid.Column="1"/>
+        <TextBlock FontSize="20" FontWeight="bold" TextAlignment="Center" Margin="110,173,332,204" Grid.Column="1" Text="Opis Gry"></TextBlock>
+        <TextBox x:Name="Opis" Text="Opis"  RenderTransformOrigin="0.74,0.491" Margin="288,173,143,204" Grid.Column="1"/>
+        <TextBlock FontSize="20" FontWeight="bold" TextAlignment="Center" Margin="110,208,332,169" Grid.Column="1" Text="Gatunek Gry"></TextBlock>
+        <ComboBox Grid.Column="1" Margin="288,214,143,166" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Content="FPS"/>
+            <ComboBoxItem Content="Action"/>
+            <ComboBoxItem Content="Survival"/>
+            <ComboBoxItem Content="RPG"/>
+            <ComboBoxItem Content="Strategy"/>
+            <ComboBoxItem Content="Puzzle"/>
+            <ComboBoxItem Content="Simulator"/>
+        </ComboBox>
+        <Button Grid.Column="1" Margin="262,325,155,63" Background="PaleVioletRed" FontWeight="Bold" FontSize="20">Dodaj</Button>
+
     </Grid>
 </Window>
