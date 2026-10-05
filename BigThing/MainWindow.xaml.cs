@@ -19,16 +19,22 @@ namespace BigThing
         public MainWindow()
         {
             InitializeComponent();
+
+            NazwaGry = new string[] { NazwaGry };
+            Opis = new string[] { Opis  };
+
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
+
+        
     }
 }

@@ -9,19 +9,19 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="673*"/>
-            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Border Background="hotpink" Grid.ColumnSpan="3"/>
-        <Border Background="pink" Margin="37,98,36,20" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <TextBlock  FontWeight="bold" FontSize="25" RenderTransformOrigin="0.495,0.499" Margin="210,60,102,318" Grid.Column="1"><Run Text="Bibliotek Gier"/></TextBlock>
-        <TextBlock FontSize="20" FontWeight="bold" TextAlignment="Center" Margin="110,135,332,243" Grid.Column="1" Text="Nazwa Gry"></TextBlock>
-        <TextBox x:Name="NazwaGry" Text="Wpisz Nazwę Gry" RenderTransformOrigin="0.74,0.491" Margin="288,135,143,243" Grid.Column="1"/>
-        <TextBlock FontSize="20" FontWeight="bold" TextAlignment="Center" Margin="110,173,332,204" Grid.Column="1" Text="Opis Gry"></TextBlock>
-        <TextBox x:Name="Opis" Text="Opis"  RenderTransformOrigin="0.74,0.491" Margin="288,173,143,204" Grid.Column="1"/>
-        <TextBlock FontSize="20" FontWeight="bold" TextAlignment="Center" Margin="110,208,332,169" Grid.Column="1" Text="Gatunek Gry"></TextBlock>
-        <ComboBox Grid.Column="1" Margin="288,214,143,166" SelectionChanged="ComboBox_SelectionChanged">
+        <Border Background="hotpink" Grid.ColumnSpan="2"/>
+        <Border Background="pink" Margin="37,98,36,20" Grid.Column="1"/>
+        <TextBlock  FontWeight="bold" FontSize="40" RenderTransformOrigin="0.494,0.534" Margin="267,10,241,352" Grid.Column="1"><Run Text="Bibliotek Gier"/></TextBlock>
+        <TextBlock FontSize="20" FontWeight="bold" TextAlignment="Center" Margin="96,135,346,243" Grid.Column="1" Text="Nazwa Gry"></TextBlock>
+        <TextBox x:Name="NazwaGry" Text="Wpisz Nazwę Gry" RenderTransformOrigin="0.74,0.491" Margin="352,135,266,243" Grid.Column="1"/>
+        <TextBlock FontSize="20" FontWeight="bold" TextAlignment="Center" Margin="96,173,346,204" Grid.Column="1" Text="Opis Gry"></TextBlock>
+        <TextBox x:Name="Opis" Text="Opis"  RenderTransformOrigin="0.74,0.491" Margin="352,173,266,204" Grid.Column="1"/>
+        <TextBlock FontSize="20" FontWeight="bold" TextAlignment="Center" Margin="96,208,346,169" Grid.Column="1" Text="Gatunek Gry"></TextBlock>
+        <ComboBox Grid.Column="1" Margin="352,214,266,169" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem Content="FPS"/>
             <ComboBoxItem Content="Action"/>
             <ComboBoxItem Content="Survival"/>
@@ -30,7 +30,8 @@
             <ComboBoxItem Content="Puzzle"/>
             <ComboBoxItem Content="Simulator"/>
         </ComboBox>
-        <Button Grid.Column="1" Margin="262,325,155,63" Background="PaleVioletRed" FontWeight="Bold" FontSize="20">Dodaj</Button>
+        <Button Grid.Column="1" Margin="128,325,400,48" Background="PaleVioletRed" FontWeight="Bold" FontSize="20">Dodaj</Button>
+        <Button Grid.Column="1" Margin="400,325,128,48" Background="PaleVioletRed" FontWeight="Bold" FontSize="20">Wyswietl Wszystkie</Button>
 
     </Grid>
 </Window>
