@@ -8,33 +8,44 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.Generic;
+
 
 namespace BigThing
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    
     public partial class MainWindow : Window
     {
+         public List<Gra> BibliotekaGier { get; set; } = new List<Gra> ();
+        
         public MainWindow()
         {
-            InitializeComponent();
-
-            NazwaGry = new string[] { NazwaGry };
-            Opis = new string[] { Opis  };
-
+            InitializeComponent ();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Button_Dodaj_Click(object sender, RoutedEventArgs e)
         {
+            string wybranyGatunek = (GatunekGryComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString();
 
+            Gra nowaGra = new Gra()
+            {
+                NazwaGry = NazwaGry.Text,
+                Opis = Opis.Text,
+                Gatunek = wybranyGatunek
+            };
+            BibliotekaGier.Add(nowaGra);
+
+            MessageBox.Show($"Pomyslnie Dodano Gre: {nowaGra.NazwaGry}", "Sukces", MessageBoxButton.OK);
+            
+            NazwaGry.Clear();
+            Opis.Clear();
+            GatunekGryComboBox.SelectedIndex = -1;
         }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        
+    }
+    public class Gra
+    {
+        public string NazwaGry { get; set; }
+        public string Opis { get; set; }
+        public string Gatunek { get; set; }
     }
 }
