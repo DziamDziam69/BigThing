@@ -25,13 +25,28 @@ namespace BigThing
 
         private void Button_Dodaj_Click(object sender, RoutedEventArgs e)
         {
-            string wybranyGatunek = (GatunekGryComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString();
+            string nazwa = NazwaGry.Text.Trim();
+            string opis = Opis.Text.Trim();
+
+            string gatunek =
+                (GatunekGryComboBox.SelectedItem as ComboBoxItem)
+                ?.Content?.ToString();
+
+            if (string.IsNullOrWhiteSpace(nazwa))
+            {
+                MessageBox.Show(
+                    "Wpisz Nazwe Gry",
+                    "Brak Nazwy",
+                    MessageBoxButton.OK
+                    );
+                return;
+            }
 
             Gra nowaGra = new Gra()
             {
                 NazwaGry = NazwaGry.Text,
                 Opis = Opis.Text,
-                Gatunek = wybranyGatunek
+                Gatunek = GatunekGryComboBox.ToString()
             };
             BibliotekaGier.Add(nowaGra);
 

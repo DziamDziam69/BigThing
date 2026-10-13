@@ -21,7 +21,7 @@
         <TextBlock FontSize="20" FontWeight="bold" TextAlignment="Center" Margin="96,173,346,204" Grid.Column="1" Text="Opis Gry"></TextBlock>
         <TextBox x:Name="Opis" Text="Opis"  RenderTransformOrigin="0.74,0.491" Margin="352,173,266,204" Grid.Column="1"/>
         <TextBlock FontSize="20" FontWeight="bold" TextAlignment="Center" Margin="96,208,346,169" Grid.Column="1" Text="Gatunek Gry"></TextBlock>
-        <ComboBox x:Name="GatunekGryComboBox" Grid.Column="1" Margin="352,214,266,169" SelectionChanged="ComboBox_SelectionChanged">
+        <ComboBox x:Name="GatunekGryComboBox" Grid.Column="1" Margin="352,214,266,169">
             <ComboBoxItem Content="FPS"/>
             <ComboBoxItem Content="Action"/>
             <ComboBoxItem Content="Survival"/>
