@@ -30,8 +30,8 @@
             <ComboBoxItem Content="Puzzle"/>
             <ComboBoxItem Content="Simulator"/>
         </ComboBox>
-        <Button Grid.Column="1" Margin="128,325,400,48" Background="PaleVioletRed" FontWeight="Bold" FontSize="20" Click="Button_Dodaj_Click">Dodaj</Button>
-        <Button Grid.Column="1" Margin="400,325,128,48" Background="PaleVioletRed" FontWeight="Bold" FontSize="20">Wyswietl Wszystkie</Button>
+        <Button Grid.Column="1" Margin="128,325,400,48" Background="PaleVioletRed" FontWeight="Bold" FontSize="20" Click="Button_Dodaj_Click" Content="Dodaj"/>
+        <Button Grid.Column="1" Margin="400,325,128,48" Background="PaleVioletRed" FontWeight="Bold" FontSize="20" Click="Button_Wyswietl_Click" Content="Wyswietl Wszystkie"/>
 
     </Grid>
 </Window>
